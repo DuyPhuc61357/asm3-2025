@@ -1,0 +1,110 @@
+.topnav-center {
+  display: none;
+}
+
+.name {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+}
+
+.profession {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  line-height: 1.5;
+}
+
+.certificates {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1200px;
+}
+
+.certificates h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.cert-row {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center certificate items horizontally */
+  gap: 40px;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: flex-start;
+
+  padding: 0;
+  flex-basis: 45%;
+  min-width: 200px;
+  max-width: 100%;
+}
+
+.cert-item:last-of-type {
+  border-right: none;
+}
+
+.cert-item img {
+  width: 90%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cert-info strong {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  display: block;
+}
+
+.cert-info p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+/* Phần liên lạc */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 110%;
+}
+
+.contact a:link,
+.contact a:visited,
+.contact a:hover,
+.contact a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.contact i {
+  color: #00aaff;
+  font-size: 200%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}

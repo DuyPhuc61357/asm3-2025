@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/laptop.css" media="(min-width: 769px)" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet.css"
+      media="(min-width: 601px) and (max-width:768px)"
+    />
+    <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 600px)" />
+    <title>Assignment03</title>
+  </head>
+  <body>
+    <!-- Tạo phần banner -->
+    <div class="container">
+      <img src="/images/banner.jpg" class="banner" />
+      <div class="name">Nguyễn Duy Phúc</div>
+      <div class="profession">English Teaching Assistant</div>
+    </div>
+    <!-- Tạo thanh điều hướng -->
+    <nav class="topnav">
+      <a href="#">
+        <div class="topnav-item">
+          <i class="icon-user"></i>
+          <span>THÔNG TIN</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="topnav-item">
+          <i class="icon-doc-text-inv"></i>
+          <span>LÝ LỊCH</span>
+        </div>
+      </a>
+      <div class="topnav-center d-none d-md-block">
+        <p>
+          Nguyễn Duy Phúc<br />
+          English Teaching Assistant
+        </p>
+      </div>
+      <a href="#">
+        <div class="topnav-item">
+          <i class="icon-mail-alt"></i>
+          <span>DỰ ÁN</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="topnav-item">
+          <i class="icon-star-1"></i>
+          <span>CHỨNG CHỈ</span>
+        </div>
+      </a>
+    </nav>
+    <!-- Tạo phần Thông tin cá nhân -->
+    <section class="info-section">
+      <div class="career-goal">
+        <h2>Mục tiêu nghề nghiệp</h2>
+        <p>
+          Trong thời gian tới sẽ trúng tuyển vào trường Đại học Kinh tế - Tài
+          chính thành phố Hồ Chí Minh (chuyên ngành Ngôn Ngữ Anh). Trong quá
+          trình học tập và làm việc, tôi sẽ tiếp tục rèn luyện các kỹ năng mềm
+          để tăng khả năng giao tiếp, học hỏi và hoàn thiện những kiến thức còn
+          thiếu. Ngoài ra, tôi sẽ tham gia các câu lạc bộ học thuật của trường
+          để năng động và sáng tạo, giúp ích cho công việc sau này.
+        </p>
+      </div>
+      <div class="personal-info">
+        <h2>Thông tin cá nhân</h2>
+        <div class="email-input-container">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter email"
+            class="email-input"
+          />
+          <button id="submitEmailBtn" class="submit-button">Submit</button>
+          <p id="emailMessage" class="email-message">
+            Hãy nhập email của bạn để xác thực.
+          </p>
+        </div>
+        <div class="personal-info-show hidden">
+          <ul>
+            <li><strong>Giới tính</strong>: Nam</li>
+            <li><strong>Ngày sinh</strong>: 30/08/2008</li>
+            <li><strong>Điện thoại</strong>: (+84) 386036949</li>
+            <li><strong>Email</strong>: phucndfx61357@funix.edu.vn</li>
+            <li><strong>Địa chỉ</strong>: Số 63, đường Hàn Mặc Tử, Vũng Tàu</li>
+            <li><strong>Website</strong>: Chưa có</li>
+          </ul>
+          <a href="#"><i class="icon-twitter"></i></a>
+          <a href="#"><i class="icon-facebook"></i></a>
+          <a href="#"><i class="icon-gplus"></i></a>
+          <a href="#"><i class="icon-linkedin"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="overview-card" id="experienceCard">
+        <div class="section-header">
+          <h2>Kinh nghiệm <i class="ic-toolbox"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="experienceCard">
+          View More ▼
+        </button>
+        <div class="card-content"></div>
+      </div>
+      <div class="overview-card" id="educationCard">
+        <div class="section-header">
+          <h2>Học vấn <i class="ic-pencil"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="educationCard">
+          View More ▼
+        </button>
+        <div class="card-content">
+          <div class="work-dates">
+            <p class="exp-time">09/2023 -&nbsp;</p>
+            <p class="exp-time-now">Hiện tại</p>
+          </div>
+          <p>
+            Trường THPT Chuyên Lê Quý Đôn (Bà Rịa - Vũng Tàu) - Lớp 11 Anh văn 1
+          </p>
+        </div>
+      </div>
+      <div class="overview-card" id="activityCard">
+        <div class="section-header">
+          <h2>Hoạt động <i class="ic-toolbox"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="activityCard">
+          View More ▼
+        </button>
+        <div class="card-content">
+          <h3>Hành trình Đỏ 2021</h3>
+          <div class="work-dates">
+            <p class="exp-time">08/2021</p>
+          </div>
+          Tham gia hiến máu tại tỉnh Bà Rịa - Vũng Tàu
+        </div>
+      </div>
+      <div class="overview-card" id="interestsCard">
+        <div class="section-header">
+          <h2>Sở thích <i class="ic-telescope"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="interestsCard">
+          View More ▼
+        </button>
+        <div class="card-content">
+          <div class="interest">
+            <div class="interest-icon">
+              <i class="fa fa-music"></i>
+            </div>
+            <p>Âm nhạc</p>
+          </div>
+          <div class="interest">
+            <div class="interest-icon">
+              <i class="ic-strategy"></i>
+            </div>
+            <p>Chơi game</p>
+          </div>
+          <div class="interest">
+            <div class="interest-icon">
+              <i class="ic-hotairballoon"></i>
+            </div>
+            <p>Du lịch</p>
+          </div>
+          <div class="interest">
+            <div class="interest-icon">
+              <i class="fa fa-globe"></i>
+            </div>
+            <p>Ngoại ngữ</p>
+          </div>
+        </div>
+      </div>
+      <div class="overview-card" id="languageCard">
+        <div class="section-header">
+          <h2>Ngôn ngữ <i class="ic-mic"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="languageCard">
+          View More ▼
+        </button>
+        <div class="card-content">
+          <p><strong>English - IELTS 8.0</strong></p>
+          <div class="skill-bars">
+            <span class="bar filled"></span>
+            <span class="bar filled"></span>
+            <span class="bar filled"></span>
+            <span class="bar filled"></span>
+          </div>
+          <p><strong>Japanese - JLPT N3</strong></p>
+          <div class="skill-bars">
+            <span class="bar filled"></span>
+            <span class="bar filled"></span>
+            <span class="bar filled"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+      <div class="overview-card" id="skillsCard">
+        <div class="section-header">
+          <h2>Kỹ năng <i class="ic-tools-2"></i></h2>
+        </div>
+        <button class="view-toggle-btn" data-target="skillsCard">
+          View More ▼
+        </button>
+        <div class="card-content">
+          <p><strong>HTML/CSS: Fundamental</strong></p>
+          <div class="skill-bars">
+            <span class="bar filled"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <p><strong>JavaScript: Fundamental</strong></p>
+          <div class="skill-bars">
+            <span class="bar filled"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="certificates">
+      <h2>Chứng chỉ - Giải thưởng</h2>
+
+      <div class="cert-row">
+        <div class="cert-item">
+          <img src="images/Cert_placeholder.png" alt="Certificate 1" />
+          <!-- vì không có hình của giải nên để tạm một hình chung (placeholder) -->
+          <div class="cert-info">
+            <strong
+              >GIẢI NHẤT KỲ THI OLYMPIC 27/4 CẤP TỈNH (MÔN TIẾNG ANH)</strong
+            >
+            <p>- Lớp 8</p>
+            <p>- Năm học: 2022-2023</p>
+          </div>
+        </div>
+        <div class="cert-item">
+          <img src="images/Cert_placeholder.png" alt="Certificate 1" />
+          <div class="cert-info">
+            <strong
+              >GIẢI NHẤT KỲ THI OLYMPIC 27/4 CẤP TỈNH (MÔN TIẾNG NHẬT)</strong
+            >
+            <p>- Lớp 11</p>
+            <p>- Năm học: 2024-2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects">
+      <h2>Dự án</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img
+            src="images/project_1.png"
+            alt="CV CÁ NHÂN"
+            class="project-image"
+          />
+
+          <h3 class="project-title">CV CÁ NHÂN</h3>
+
+          <div class="project-tags">
+            <span class="tag time">2025</span>
+            <span class="tag"><i class="icon-user-1"></i> FUNiX</span>
+            <span class="tag"><i class="icon-lamp"></i> Developer</span>
+          </div>
+
+          <table class="project-info">
+            <tr>
+              <td><strong>Mô tả</strong></td>
+              <td>
+                Trang Web CV cá nhân online. Gồm các thông tin cá nhân cũng như
+                kỹ năng nghề nghiệp.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Nhiệm vụ</strong></td>
+              <td>
+                - Phát triển code<br />
+                - Review code<br />
+                - Tối ưu code<br />
+                - Xử lý lỗi
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Công nghệ</strong></td>
+              <td>- HTML, CSS</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <a href="https://facebook.com">
+        <div class="contact-item">
+          <i class="icon-facebook-circled"></i>
+          <span>Facebook</span>
+        </div>
+      </a>
+      <a href="https://linkedin.com">
+        <div class="contact-item">
+          <i class="icon-linkedin-circled"></i>
+          <span>LinkedIn</span>
+        </div>
+      </a>
+      <a href="https://github.com">
+        <div class="contact-item">
+          <i class="icon-github-circled"></i>
+          <span>GitHub</span>
+        </div>
+      </a>
+    </section>
+    <!-- Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

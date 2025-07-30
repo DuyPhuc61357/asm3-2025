@@ -1,0 +1,377 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.email-message {
+  color: gray;
+  display: block;
+  font-size: 15px;
+}
+
+.email-input {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#submitEmailBtn {
+  background-color: #008cba;
+  color: white;
+}
+/* Làm cho phần ảnh tối đi để dễ đọc chữ, rồi cắt bớt một phần ảnh */
+.banner {
+  filter: brightness(50%);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.name {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 75px;
+  width: 100%;
+}
+
+.profession {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  width: 100%;
+}
+/* Chỉnh thanh điều hướng */
+.topnav {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-bottom: #ddd solid 1px;
+}
+/* ↓ Chỉnh sao cho đường link không có gạch chân*/
+.topnav a {
+  text-decoration: none;
+  border-left: 1px solid #ddd;
+  height: 100%;
+}
+/* ↓ Chỉnh icon*/
+.topnav i {
+  color: darkturquoise;
+  font-size: 20px;
+  margin-right: 5px;
+}
+/* ↓ Chỉnh phần tên ở giữa thanh*/
+.topnav-center {
+  text-align: center;
+  border-left: 1px solid #ddd;
+  width: 500px;
+  padding: 0 30px;
+}
+.topnav p::first-line {
+  font-size: 30px;
+}
+/* ↓ Chỉnh từng phần tử xung quanh*/
+.topnav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.topnav-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.topnav a:last-of-type {
+  border-right: solid 1px #ddd;
+}
+
+.topnav a:visited {
+  color: #000;
+}
+
+/* Chỉnh phần thông tin cá nhân với Grid */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+}
+
+.career-goal,
+.personal-info {
+  background-color: #f2f2f2;
+  padding: 20px 30px;
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+.personal-info {
+  background-color: #e7e5e5;
+}
+.personal-info li {
+  margin-bottom: 8px;
+}
+
+.personal-info a:link,
+.personal-info a:visited,
+.personal-info a:hover,
+.personal-info a:active {
+  color: dodgerblue;
+}
+
+/* Chỉnh phần Thông tin nghề nghiệp */
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 40px;
+  line-height: 1.5;
+}
+
+.section-header h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header i {
+  font-size: 60px;
+}
+.overview li {
+  list-style-type: "-  ";
+}
+.overview-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+}
+
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.card-content.expanded {
+  max-height: 500px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.view-toggle-btn {
+  /* nút View More */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.overview-card:hover .view-toggle-btn {
+  opacity: 1;
+}
+
+.overview-card.expanded .view-toggle-btn {
+  background-color: #dc3545; /* khi đang hiển thị nội dung, nút sẽ chuyển màu đỏ */
+  opacity: 1;
+}
+/* Phần Kinh nghiệm, Học vấn, Hoạt động */
+.work-dates {
+  display: flex;
+  margin-bottom: 0;
+  color: #777;
+  font-style: italic;
+}
+.exp-time-now {
+  /* phần ghi "hiện tại" trong khoảng thời gian làm việc */
+  background-color: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Phần Sở thích */
+.interest {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+
+.interest-icon {
+  width: 75px;
+  height: 75px;
+  border: 2px solid #00aaff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px;
+}
+.interest-icon i {
+  font-size: 40px;
+  color: #00aaff;
+}
+/* Phần Ngôn ngữ, Kỹ năng */
+.skill-bars {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0 15px;
+}
+
+.bar {
+  width: 50px;
+  height: 5px;
+  background-color: #dcdcdc; /* mức điểm trống */
+  border-radius: 2px;
+}
+
+.bar.filled {
+  background-color: #1a73e8; /* mức điểm đạt */
+}
+
+/* Phần chứng chỉ */
+.certificates {
+  background-color: #f9f9f9;
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 20px 0;
+  border-bottom: 2px solid #d6c08d;
+}
+
+.cert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  border-right: 2px solid #d6c08d;
+}
+
+.cert-item img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #eee;
+}
+
+/* Phần Dự án */
+.projects {
+  background-color: white;
+  padding: 30px;
+  font-family: sans-serif;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.project-title {
+  font-size: 30px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tag.time {
+  background-color: #007bff;
+  color: white;
+}
+
+.project-info {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.project-info td {
+  border-top: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: top;
+}
+
+.project-info td:first-child {
+  width: 30%;
+  color: #555;
+}
+/* Phần liên lạc */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 25px;
+}
+
+.contact a:link,
+.contact a:visited,
+.contact a:hover,
+.contact a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.contact i {
+  color: #00aaff;
+  font-size: 40px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}

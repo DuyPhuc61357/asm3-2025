@@ -1,0 +1,183 @@
+.topnav {
+  flex-direction: column; /* Cho các mục dàn xuống theo chiều dọc */
+  align-items: flex-start; /* Căn về phía bên trái */
+  padding: 10px;
+  background-color: transparent;
+  height: auto;
+}
+
+.topnav > a {
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+.topnav a:last-of-type {
+  border-right: none;
+}
+
+.topnav-item {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.topnav-item i {
+  margin-bottom: 0;
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.topnav-item span {
+  font-size: 1em;
+}
+
+.name {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  width: 100%;
+}
+
+.profession {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  width: 100%;
+}
+
+/* Phần thông tin */
+.info-section {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #f0f0f0;
+}
+
+.career-goal {
+  background-color: #f2f2f2;
+}
+
+.personal-info {
+  background-color: #e7e5e5;
+}
+
+.info-section h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.info-section p,
+.info-section ul {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-section ul li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+.personal-info a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Phần kỹ năng */
+
+.overview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 40px;
+  line-height: 1.5;
+}
+
+.certificates {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1200px;
+}
+
+.certificates h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.cert-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  border-bottom: none;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: flex-start;
+
+  padding: 0;
+  flex-basis: 90%;
+  min-width: 200px;
+  max-width: 100%;
+  border-right: none;
+  border-bottom: 2px solid #d6c08d;
+}
+
+.cert-item :last-child {
+  border-bottom: none;
+}
+.cert-item img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #eee;
+}
+
+/* Phần liên lạc */
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 100%;
+}
+
+.contact a:link,
+.contact a:visited,
+.contact a:hover,
+.contact a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.contact i {
+  color: #00aaff;
+  font-size: 200%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
